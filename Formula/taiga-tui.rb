@@ -1,8 +1,8 @@
 class TaigaTui < Formula
   desc "Keyboard-driven terminal UI for Taiga Taskboards and Kanban Boards"
   homepage "https://github.com/zeckitoz/taiga-tui"
-  url "https://github.com/zeckitoz/taiga-tui/archive/refs/tags/v0.2.2.tar.gz"
-  sha256 "440bf60bbdfa42e3018f1d49dc77b5f56c3302bac65c1c4d18da7b48b7542007"
+  url "https://github.com/zeckitoz/taiga-tui/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "0971550601c6492f3ddd52dc84a66b5530eddc7eee0fed378d9561293a8399e9"
   license "MIT"
   head "https://github.com/zeckitoz/taiga-tui.git", branch: "main"
 
@@ -14,8 +14,8 @@ class TaigaTui < Formula
     ldflags = %W[
       -s -w
       -X github.com/zeckitoz/taiga-tui/internal/version.version=v#{version}
-      -X github.com/zeckitoz/taiga-tui/internal/version.commit=e653667a989ec74159ecdbace8d67a313fa9b4db
-      -X github.com/zeckitoz/taiga-tui/internal/version.date=2026-11-16T12:58:01Z
+      -X github.com/zeckitoz/taiga-tui/internal/version.commit=12fbdc0c0d62077afecc11a5141c46ffdeddbdc2
+      -X github.com/zeckitoz/taiga-tui/internal/version.date=2026-11-16T13:24:52Z
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/taiga-tui"
   end
